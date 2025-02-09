@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 1440px;
+  height: 100vh;
+}
+
+footer {
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+
+/* imagem com a localização da UFF */
+.localizacao img {
+  width: 250px;
+  height: 168px;
+}
+
+.localizacao {
+  padding-top: 50px;
+  padding-right: 40px;
+}
+
+.contato-container {
+  display: flex;
+  align-items: center;
+}
+
+.svgs {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+  gap: 22px;
+}
+
+.contato {
+  color: #fff;
+  width: 378px;
+}
+
+.contato p {
+  line-height: 20px;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.contato button {
+  background-color: #deb959;
+  color: #353535;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.creditos {
+  padding-left: 179px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.creditos p {
+  color: #fff;
+  font-size: 23px;
+  margin-top: 50px;
+}
+
+.creditos img {
+  width: 104px;
+  height: 104px;
+}
+
+.contato-text {
+  line-height: 20px;
+  margin: 0;
+}
