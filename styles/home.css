@@ -101,6 +101,14 @@ h3 {
   flex-direction: column;
 }
 
+.valores-content img {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+
+}
+
 .lobinho {
   background-color: #fff;
   display: flex;
