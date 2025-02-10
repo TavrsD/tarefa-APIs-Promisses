@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: normal;
+  font-family: "Darker Grotesque";
 }
 
 html,
@@ -16,6 +18,7 @@ footer {
   justify-content: center;
   width: 1440px;
   height: 275px;
+  padding-top: 51px;
   gap: 20px;
 }
 
@@ -26,13 +29,13 @@ footer {
 }
 
 .localizacao {
-  padding-top: 50px;
   padding-right: 40px;
 }
 
 .contato-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .svgs {
@@ -43,23 +46,32 @@ footer {
 }
 
 .contato {
+  display: flex;
+  justify-content: left;
+  align-items: center;
   color: #fff;
   width: 378px;
 }
 
-.contato p {
-  line-height: 20px;
-  margin: 0;
-  padding-bottom: 15px;
+.contato img {
+  margin-right: 15px;
+  max-width: 15px;
+  height: 15px;
 }
 
-.contato button {
+#quemSomos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #deb959;
   color: #353535;
   border: none;
+  width: 144px;
+  height: 30px;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .creditos {
@@ -73,7 +85,6 @@ footer {
 .creditos p {
   color: #fff;
   font-size: 23px;
-  margin-top: 50px;
 }
 
 .creditos img {
