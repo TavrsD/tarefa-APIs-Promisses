@@ -14,8 +14,8 @@ footer {
   background-color: #333333;
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  width: 1440px;
+  height: 275px;
   gap: 20px;
 }
 
