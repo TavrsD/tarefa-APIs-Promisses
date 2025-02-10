@@ -81,6 +81,8 @@ h3 {
   text-align: center;
 }
 
+/* section valores */
+
 .valores {
   background-color: #333333;
   display: flex;
@@ -88,10 +90,18 @@ h3 {
   align-items: center;
 }
 
+.generic-h2 {
+  color: #deb959;
+  padding-top: 30px;
+  font-size: 48px;
+}
+
 .valores-array {
   display: flex;
   align-items: center;
   flex-direction: row;
+  width: 960px;
+  height: 625px;
 }
 
 .valores-content {
@@ -99,6 +109,8 @@ h3 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 26px;
+  padding: 15px;
 }
 
 .valores-content img {
@@ -106,7 +118,14 @@ h3 {
   border-radius: 50%;
   width: 190px;
   height: 190px;
+}
 
+.valores-content p {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 32.5px;
+  color: #fff;
+  text-align: center;
 }
 
 .lobinho {
@@ -114,4 +133,8 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+#footer-container {
+  width: 100%;
 }
