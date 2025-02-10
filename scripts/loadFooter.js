@@ -1,8 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("../components/footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("footer-container").innerHTML = data;
-    })
-    .catch((error) => console.error("Error loading footer:", error));
+document.addEventListener("DOMContentLoaded", async function () {
+  try {
+    const response = await fetch("../components/footer.html");
+    const data = await response.text();
+    document.getElementById("footer-container").innerHTML = data;
+  } catch (error) {
+    console.error("Error loading footer:", error);
+  }
 });
