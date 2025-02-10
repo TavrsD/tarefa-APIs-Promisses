@@ -1,0 +1,35 @@
+* {
+  font-family: "Darker Grotesque";
+}
+
+html,
+body {
+  width: 1440px;
+  height: 100vh;
+}
+
+.quem-somos {
+  height: 340px;
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quem-somos h1 {
+  font-size: 48px;
+  color: #000;
+  padding-bottom: 50px;
+}
+
+.quem-somos p {
+  width: 960px;
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+#footer-container {
+  margin-top: auto;
+}
