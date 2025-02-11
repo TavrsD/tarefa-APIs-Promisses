@@ -85,6 +85,7 @@ body {
   color: #fff;
   font-size: 36px;
   border: 1px solid #333333;
+  border-radius: 5px;
   padding-bottom: 15px;
   margin-bottom: 50px;
 }
@@ -93,7 +94,7 @@ body {
   background-color:#85CDF5;
   font-weight: 500;
   color: #000;
-
+  transition: 0.5s;
   cursor: pointer;
 }
 
