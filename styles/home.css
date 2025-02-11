@@ -5,6 +5,18 @@
   font-family: "Darker Grotesque";
 }
 
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #deb959;
+  padding-bottom: 15px;
+}
+
+h3 {
+  color: #fff;
+  font-size: 34px;
+}
+
 .hero {
   height: 500px;
   background-image: url("../assets/lobo-principal.png"); /* Defina o caminho da imagem */
@@ -47,10 +59,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   background: #2c5680;
   height: 333px;
   width: 100%;
-  text-align: center;
+  padding-inline: 20%;
+  padding-bottom: 15px;  
 }
 
 .sobre-content {
@@ -58,20 +72,74 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 960px;
 }
 
-.sobre-content h2 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #deb959;
-  padding-bottom: 15px;
-}
-
-.sobre-content p {
+.sobre p {
   font-size: 24px;
   font-weight: 400;
   line-height: 32.5px;
   color: #fff;
   text-align: center;
+}
+
+/* section valores */
+
+.valores {
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.generic-h2 {
+  color: #deb959;
+  padding-top: 30px;
+  font-size: 48px;
+}
+
+.valores-array {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 960px;
+  height: 625px;
+}
+
+.valores-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 26px;
+  padding: 15px;
+}
+
+.valores-content img {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+}
+
+.valores-content p {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 32.5px;
+  color: #fff;
+  text-align: center;
+}
+
+.lobinho {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#footer-container {
+  width: 100%;
+}
+
+#h2-sobre {
+  padding-top: 0px;
 }

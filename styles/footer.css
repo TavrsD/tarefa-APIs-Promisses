@@ -20,12 +20,7 @@ footer {
   height: 275px;
   padding-top: 51px;
   gap: 20px;
-}
-
-/* imagem com a localização da UFF */
-.localizacao img {
-  width: 250px;
-  height: 168px;
+  width: 100%;
 }
 
 .localizacao {
