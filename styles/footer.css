@@ -21,6 +21,11 @@ footer {
   gap: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .localizacao {
   padding-right: 40px;
 }
@@ -65,6 +70,14 @@ footer {
   padding: 10px 20px;
   font-size: 20px;
   font-weight: 700;
+  cursor: pointer;
+}
+
+#quemSomos:hover {
+  background-color:#85CDF5;
+  color: #000;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .creditos {
