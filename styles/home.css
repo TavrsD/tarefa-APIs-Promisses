@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Darker Grotesque";
+}
+
+.hero {
+  height: 500px;
+  background-image: url("../assets/lobo-principal.png"); /* Defina o caminho da imagem */
+  background-size: cover; /* Faz a imagem cobrir toda a div */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Garante que o texto fique legível */
+  padding: 20px;
+}
+
+.hero-content {
+  width: 665px;
+  height: 238px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-content h1 {
+  font-size: 95px;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+
+.hero-content p {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+/* section sobre */
+
+.sobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #2c5680;
+  height: 333px;
+  width: 100%;
+  text-align: center;
+}
+
+.sobre-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 960px;
+}
+
+.sobre-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #deb959;
+  padding-bottom: 15px;
+}
+
+.sobre-content p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32.5px;
+  color: #fff;
+  text-align: center;
+}
