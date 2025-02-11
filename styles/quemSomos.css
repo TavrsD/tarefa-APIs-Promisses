@@ -9,7 +9,7 @@ body {
 }
 
 .quem-somos {
-  height: 340px;
+  height: 57.1vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -26,9 +26,10 @@ body {
 .quem-somos p {
   width: 960px;
   font-size: 24px;
+  font-weight: normal;
   text-align: center;
   margin: 0;
-}
+  }
 
 #footer-container {
   margin-top: auto;
