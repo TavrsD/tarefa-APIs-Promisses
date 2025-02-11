@@ -59,10 +59,12 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   background: #2c5680;
   height: 333px;
   width: 100%;
-  text-align: center;
+  padding-inline: 20%;
+  padding-bottom: 15px;  
 }
 
 .sobre-content {
@@ -70,10 +72,9 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 960px;
 }
 
-.sobre-content p {
+.sobre p {
   font-size: 24px;
   font-weight: 400;
   line-height: 32.5px;
@@ -137,4 +138,8 @@ h3 {
 
 #footer-container {
   width: 100%;
+}
+
+#h2-sobre {
+  padding-top: 0px;
 }
