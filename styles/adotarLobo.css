@@ -31,7 +31,10 @@ body {
 
 .adotar-lobo h2 {
   font-size: 30px;
+  font-weight: normal;
   color: #000;
+  margin-bottom: 32px;
+  margin-top: 16px;
 }
 
 .adotar-lobo p {
@@ -44,25 +47,59 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  gap: 24px;
 }
 
-.adotar{
+#nome {
+  width: 868px;
+  border:0;
+  border-bottom: 1px solid #000;
+  padding-left: 1%;
+}
+
+#idade{
+  width: 72px;
+  border:0;
+  border-bottom: 1px solid #000;
+  padding-left: 10%;
+}
+
+#email{
+  width: 960px;
+  border:0;
+  border-bottom: 1px solid #000;
+  padding-left: 10%;
+}
+
+.adotar {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
 }
 
-#botao_adota{
+#botao_adota {
   width: 209px;
   height: 60px;
   background: #2C5680;
   color: #fff;
-  font-family: Darker Grotesque;
   font-size: 36px;
   border: 1px solid #333333;
   padding-bottom: 15px;
   margin-bottom: 50px;
+}
+
+#botao_adota:hover {
+  background-color:#85CDF5;
+  font-weight: 500;
+  color: #000;
+
+  cursor: pointer;
+}
+
+#botao_adota:active {
+  background-color: #7AAC3A;
+  cursor: pointer;
 }
 
 #footer-container {
