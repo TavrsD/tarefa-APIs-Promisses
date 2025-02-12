@@ -12,6 +12,11 @@ h2 {
   padding-bottom: 15px;
 }
 
+.exemplos {
+  margin-bottom: 35px;
+  margin-top: 25px;
+}
+
 h3 {
   color: #fff;
   font-size: 34px;
@@ -64,7 +69,7 @@ h3 {
   height: 333px;
   width: 100%;
   padding-inline: 20%;
-  padding-bottom: 15px;  
+  padding-bottom: 15px;
 }
 
 .sobre-content {

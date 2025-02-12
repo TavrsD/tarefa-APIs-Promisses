@@ -1,0 +1,64 @@
+* {
+  font-family: "Darker Grotesque";
+}
+
+.lobo-card {
+  display: flex; /* Ativa Flexbox */
+  align-items: stretch; /* Faz com que a imagem e o texto tenham a mesma altura */
+  gap: 59px; /* Espaço entre a imagem e o texto */
+  padding: 16px;
+  width: 100%; /* Ajuste conforme o layout */
+  max-width: 990px; /* Limita o tamanho do card */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.lobo-imagem {
+  flex: 1; /* A imagem ocupa 1 parte do espaço disponível */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .background-image {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 338px;
+    height: 228px;
+    background-color: #2c5680; /* Cor sólida */
+    z-index: 0; /* Coloca a div atrás da imagem */
+    border: 2px solid black; /* Borda preta */
+  }
+
+  img {
+    width: 338px; /* Faz a imagem ocupar todo o espaço da div */
+    height: 228px;
+    object-fit: cover;
+    z-index: 1; /* Coloca a imagem na frente da div */
+  }
+}
+
+.lobo-card:nth-child(even) .background-image {
+  top: 20px;
+  left: 20px;
+}
+
+.lobo-info {
+  flex: 1.5; /* O texto ocupa mais espaço */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  p {
+    font-weight: normal;
+  }
+
+  h2 {
+    color: black;
+  }
+}
+
+.lobo-card:nth-child(even) .lobo-info {
+  text-align: right;
+}
