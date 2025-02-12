@@ -1,0 +1,108 @@
+* {
+  font-family: "Darker Grotesque";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.lobos-list {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lobos-list h1 {
+  font-size: 48px;
+  color: #000;
+  padding-bottom: 50px;
+}
+
+.lobos-list p {
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+}
+
+#search {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin-bottom: 35px; /* Adiciona uma margem inferior de 35px */
+  box-sizing: border-box;
+}
+
+#lobinhos {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lobinho {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.foto-container {
+  position: relative;
+  margin: 20px; /* Adiciona margem para afastar da borda */
+}
+
+.foto-background {
+  width: 430px;
+  height: 328px;
+  background-color: #2C5680;
+  border: 2px solid #000; /* Cor de fundo para a div */
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: 0;
+}
+
+.foto-container img {
+  width: 430px;
+  height: 328px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.lobinho div {
+  flex: 1;
+}
+
+.lobinho:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+#pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#pagination button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#pagination .disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
