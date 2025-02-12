@@ -36,7 +36,7 @@ function displayLobinhos() {
   lobinhosContainer.innerHTML = '';
 
   lobinhosToDisplay.forEach(lobinho => {
-    const adoteButton = lobinho.adotado ? `<button disabled>Adotado</button>` : `<button>Adote</button>`;
+    const adoteButton = lobinho.adotado ? `<button disabled>Adotado</button>` : `<button onclick="adoteLobinho(${lobinho.id})">Adote</button>`;
     const lobinhoHTML = `
       <div class="lobinho">
         <div class="foto-container">
@@ -57,6 +57,10 @@ function displayLobinhos() {
   });    
 
   displayPagination(filteredLobinhos.length);
+}
+
+function adoteLobinho(id) {
+  window.location.href = `showlobinho.html?id=${id}`;
 }
 
 function displayPagination(totalItems) {
