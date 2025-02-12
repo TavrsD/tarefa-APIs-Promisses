@@ -33,12 +33,33 @@ body {
   margin: 0;
 }
 
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 35px;
+}
+
+
 #search {
   width: 100%;
   max-width: 600px;
   padding: 10px;
-  margin-bottom: 35px; /* Adiciona uma margem inferior de 35px */
+  margin-bottom: 35px; 
   box-sizing: border-box;
+}
+
+#addLobo {
+  padding: 10px 20px;
+  margin-bottom: 35px; 
+  background-color: #deb959;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
 }
 
 #lobinhos {
@@ -89,8 +110,14 @@ body {
   flex-direction: row-reverse;
 }
 
+.lobinho:nth-child(even) .foto-background {
+  top: 20px;
+  left: 20px;
+}
+
 #pagination {
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   gap: 10px;
   justify-content: center;
