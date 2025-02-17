@@ -1,0 +1,23 @@
+{
+  "name": "adoteumlobinho",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TavrsD/tarefa-APIs-Promisses.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TavrsD/tarefa-APIs-Promisses/issues"
+  },
+  "homepage": "https://github.com/TavrsD/tarefa-APIs-Promisses#readme",
+  "description": "",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
