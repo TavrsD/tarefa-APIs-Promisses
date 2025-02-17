@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const baseURL = 'http://localhost:3000/lobos';
   
-    fetch('../lobinhos.json')
+    fetch(baseURL)
       .then(response => response.json())
       .then(data => {
         const lobinho = data.find(l => l.id == id);
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
           document.getElementById('excluir').addEventListener('click', () => {
             if (confirm('Tem certeza que deseja excluir este lobinho?')) {
-              fetch(`../lobinhos.json`, {
+              fetch(baseURL, {
                 method: 'DELETE',
                 headers: {
                   'Content-Type': 'application/json'

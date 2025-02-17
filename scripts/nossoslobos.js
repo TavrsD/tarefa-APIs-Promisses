@@ -1,8 +1,9 @@
 let lobinhos = [];
 let currentPage = 1;
 const itemsPerPage = 4;
+const baseURL = 'http://localhost:3000/lobos';
 
-fetch('../lobinhos.json')
+fetch(baseURL)
   .then(response => {
     if (!response.ok) {
       throw new Error('Erro ao carregar o arquivo JSON');
@@ -10,7 +11,7 @@ fetch('../lobinhos.json')
     return response.json();
   })
   .then(data => {
-    console.log('Dados carregados:', data); // Log dos dados carregados
+    console.log('Dados carregados:', data);
     lobinhos = data;
     displayLobinhos();
   })
