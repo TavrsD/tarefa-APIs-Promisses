@@ -50,7 +50,8 @@ function displayLobinhos() {
   lobinhosContainer.innerHTML = '';
 
   lobinhosToDisplay.forEach(lobinho => {
-    const adoteButton = lobinho.adotado ? `<button disabled>Adotado</button>` : `<button onclick="adoteLobinho(${lobinho.id})">Adote</button>`;
+    const adoteButton = lobinho.adotado ? `<button disabled class="adotado-button">adotado</button>` : `<button class="adotar-button" onclick="adoteLobinho(${lobinho.id})">Adote</button>`;
+    const tutor = lobinho.adotado ? `<span><strong>Adotado por: ${lobinho.nomeDono}</strong></span>` : ``;
     const lobinhoHTML = `
       <div class="lobinho">
         <div class="foto-container">
@@ -59,13 +60,14 @@ function displayLobinhos() {
         </div>
         <div class="info-container">
           <div class="name-age-button">
-            <div id="infoTite">
+            <div id="info-tite">
               <h2>${lobinho.nome}</h2>
-              <p>Idade: ${lobinho.idade}</p>
+              <span>Idade: ${lobinho.idade}</span>
             </div>
             ${adoteButton}
           </div>
           <p>${lobinho.descricao}</p>
+          ${tutor}
         </div>
       </div>
     `;

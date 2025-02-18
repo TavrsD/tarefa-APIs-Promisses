@@ -26,11 +26,22 @@ body {
   padding-bottom: 50px;
 }
 
+.lobos-list h2 {
+  font-size: 36px;
+  color: #000;
+  padding-bottom: 20px;
+}
+
 .lobos-list p {
   font-size: 24px;
   font-weight: normal;
   text-align: center;
   margin: 0;
+}
+
+.lobos-list span {
+  font-size: 20px;
+  font-weight: normal;
 }
 
 .search-container {
@@ -56,6 +67,8 @@ body {
 }
 
 #addLobo {
+  font-size: 2rem;
+  font-weight: normal;
   padding: 10px 20px;
   background-color: #deb959;
   color: #fff;
@@ -110,12 +123,40 @@ body {
   gap: 10px;
 }
 
+.info-container button {
+  width: 30%;
+  height: 10%;
+  font-size: 2rem;
+  font-weight: normal;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+}
+
+.adotar-button {
+  background-color: #deb959;
+  cursor: pointer;
+}
+
+.adotado-button {
+  background-color: #7AAC3A;
+}
+
 .lobinho div {
   flex: 1;
 }
 
 .lobinho:nth-child(even) {
   flex-direction: row-reverse;
+}
+
+.lobinho:nth-child(even) .name-age-button {
+  flex-direction: row-reverse;
+}
+
+.lobinho:nth-child(even) .info-container {
+  text-align: right;
 }
 
 .lobinho:nth-child(even) .foto-background {
