@@ -20,12 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
           document.getElementById('excluir').addEventListener('click', () => {
             if (confirm('Tem certeza que deseja excluir este lobinho?')) {
-              fetch(baseURL, {
+              fetch(`${baseURL}/${lobinho.id}`, {
                 method: 'DELETE',
                 headers: {
                   'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ id: lobinho.id })
+                }
               })
               .then(response => response.json())
               .then(data => {
