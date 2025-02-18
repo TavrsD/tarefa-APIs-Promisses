@@ -57,12 +57,14 @@ function displayLobinhos() {
           <div class="foto-background"></div>
           <img src="${lobinho.imagem}" alt="Imagem de ${lobinho.nome}">
         </div>
-        <div>
-          <div>
-            <h2>${lobinho.nome}</h2>
-            <p>Idade: ${lobinho.idade}</p>
+        <div class="info-container">
+          <div class="name-age-button">
+            <div id="infoTite">
+              <h2>${lobinho.nome}</h2>
+              <p>Idade: ${lobinho.idade}</p>
+            </div>
+            ${adoteButton}
           </div>
-          ${adoteButton}
           <p>${lobinho.descricao}</p>
         </div>
       </div>

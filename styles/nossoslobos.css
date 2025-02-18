@@ -82,14 +82,14 @@ body {
 
 .foto-container {
   position: relative;
-  margin: 20px; /* Adiciona margem para afastar da borda */
+  margin: 20px;
 }
 
 .foto-background {
   width: 430px;
   height: 328px;
   background-color: #2C5680;
-  border: 2px solid #000; /* Cor de fundo para a div */
+  border: 2px solid #000;
   position: absolute;
   top: -20px;
   left: -20px;
@@ -102,6 +102,12 @@ body {
   object-fit: cover;
   position: relative;
   z-index: 1;
+}
+
+.name-age-button {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .lobinho div {
