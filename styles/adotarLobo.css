@@ -9,24 +9,62 @@ body {
 }
 
 .adotar-lobo {
-  height: 65vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 2% 15%;
+}
+
+#lobo-container {
+  display: flex;
+  flex-direction: row;
+  align-self: start;
+  align-items: flex-start;
+  gap: 64px;
 }
 
 .adotar-lobo img {
   width: 200px;
+  height: 200px;
   border-radius: 50%;
-  padding-bottom: 50px;
+}
+
+.lobo-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .adotar-lobo h1 {
   font-size: 60px;
   color: #000;
-  padding-bottom: 50px;
+}
+
+.adotar-lobo form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formulario {
+  width: 100%;
+}
+
+.nome-idade {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.nome-idade > div {
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .adotar-lobo h2 {
@@ -42,33 +80,39 @@ body {
   text-align: center;
   margin: 0;
 }
+.adotar-lobo span {
+  font-size: 14px;
+}
 
-.formulario {
+.adotar-lobo form {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.formulario {
+  width: 100%;
+}
+.nome-idade {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
   gap: 24px;
 }
 
-#nome {
-  width: 868px;
-  border:0;
+#nome,
+#idade,
+#email {
+  width: 100%;
+  border: 0;
   border-bottom: 1px solid #000;
   padding-left: 1%;
 }
 
-#idade{
-  width: 72px;
-  border:0;
-  border-bottom: 1px solid #000;
-  padding-left: 10%;
-}
-
-#email{
-  width: 960px;
-  border:0;
-  border-bottom: 1px solid #000;
-  padding-left: 10%;
+#nome {
+  width: 55vw;
 }
 
 .adotar {
