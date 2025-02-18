@@ -2,6 +2,8 @@ let lobinhos = [];
 let currentPage = 1;
 const itemsPerPage = 4;
 const baseURL = 'http://localhost:3000/lobos';
+const searchInput = document.getElementById('search');
+const adoptionCheckbox = document.getElementById('filter-adoption');
 
 fetch(baseURL)
   .then(response => {
@@ -11,23 +13,34 @@ fetch(baseURL)
     return response.json();
   })
   .then(data => {
-    console.log('Dados carregados:', data); // Log dos dados carregados
+    console.log('Dados carregados:', data);
     lobinhos = data;
     displayLobinhos();
   })
   .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
 
-document.getElementById('search').addEventListener('input', function() {
+searchInput.addEventListener('input', function() {
+  currentPage = 1;
+  displayLobinhos();
+});
+
+adoptionCheckbox.addEventListener('change', function() {
   currentPage = 1;
   displayLobinhos();
 });
 
 function displayLobinhos() {
-  const searchQuery = document.getElementById('search').value.toLowerCase();
-  const filteredLobinhos = lobinhos.filter(lobinho => 
+  const searchQuery = searchInput.value.toLowerCase();
+  const showOnlyAdopted = adoptionCheckbox.checked;
+
+  let filteredLobinhos = lobinhos.filter(lobinho => 
     lobinho.nome.toLowerCase().includes(searchQuery) ||
     lobinho.descricao.toLowerCase().includes(searchQuery)
   );
+
+  if (showOnlyAdopted) {
+    filteredLobinhos = filteredLobinhos.filter(lobinho => lobinho.adotado === true);
+  }
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -55,7 +68,7 @@ function displayLobinhos() {
       </div>
     `;
     lobinhosContainer.innerHTML += lobinhoHTML;
-  });    
+  });
 
   displayPagination(filteredLobinhos.length);
 }
@@ -86,10 +99,8 @@ function displayPagination(totalItems) {
     return button;
   };
 
-  // Previous button
   paginationContainer.appendChild(createButton('←', currentPage - 1, currentPage === 1));
 
-  // Page numbers
   if (currentPage > 3) {
     paginationContainer.appendChild(createButton(1, 1));
     if (currentPage > 4) {
@@ -108,6 +119,5 @@ function displayPagination(totalItems) {
     paginationContainer.appendChild(createButton(totalPages, totalPages));
   }
 
-  // Next button
   paginationContainer.appendChild(createButton('→', currentPage + 1, currentPage === totalPages));
 }
