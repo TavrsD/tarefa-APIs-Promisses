@@ -26,7 +26,7 @@
   margin: 0 auto;
 }
 
-.add-lobinho button {
+#salvar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +37,7 @@
   border: none;
   border-radius: 5px;
   font-size: 24px;
+  cursor: pointer;
 }
 
 h2 {

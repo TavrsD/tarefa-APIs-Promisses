@@ -11,7 +11,7 @@ fetch(baseURL)
     return response.json();
   })
   .then(data => {
-    console.log('Dados carregados:', data);
+    console.log('Dados carregados:', data); // Log dos dados carregados
     lobinhos = data;
     displayLobinhos();
   })
