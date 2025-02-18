@@ -1,12 +1,12 @@
-async function carregarLobosDoJSON() {
+const baseURL = "http://localhost:3000/lobos"; 
+async function carregarLobosDoEndpoint() {
   try {
     console.log("Iniciando o carregamento dos lobos do JSON...");
-    const response = await fetch("../lobinhos.json"); // Caminho ajustado
+    const response = await fetch(baseURL); // Caminho ajustado
     if (!response.ok) {
       throw new Error(`Erro ao buscar lobinhos.json: ${response.statusText}`);
     }
-    const data = await response.json();
-    const lobos = data.lobos; // Acessa a propriedade 'lobos' do JSON
+    const lobos = await response.json();
     console.log("Lobos carregados com sucesso:", lobos);
     iniciarRotacaoDeLobos(lobos);
   } catch (error) {
@@ -52,7 +52,6 @@ function renderizarLobos(lobos, startIndex) {
     container.appendChild(card);
   }
 
-  // Adiciona o próximo card se houver
   if (startIndex + 1 < lobos.length) {
     const lobo = lobos[startIndex + 1];
     const card = document.createElement("div");
@@ -76,5 +75,4 @@ function renderizarLobos(lobos, startIndex) {
   }
 }
 
-// Carregar os lobos assim que a página carregar
-window.onload = carregarLobosDoJSON;
+document.addEventListener("DOMContentLoaded", carregarLobosDoEndpoint);
