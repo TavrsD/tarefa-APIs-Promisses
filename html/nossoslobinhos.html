@@ -18,9 +18,16 @@
         <div class="lobos-list">
         <h1>Nossos Lobinhos</h1>
         <div class="search-container">
-            <input type="text" id="search" placeholder="Buscar lobinho..." />
-            <button id="addLobo" onclick="window.location.href='addLobinho.html'">+Lobos</button>
+         <div class="search-bar">
+          <input type="text" id="search" placeholder="Buscar lobinho..." />
+          <button id="addLobo" onclick="window.location.href='addLobinho.html'">+Lobos</button>
           </div>
+          <div>
+            <input type="checkbox" id="filter" />
+            <label for="filter">Ver lobinhos adotados</label>
+          </div>
+        </div>
+        
         <div id="lobinhos"></div>
         <div id="pagination"></div>
         </div>

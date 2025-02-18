@@ -35,26 +35,28 @@ body {
 
 .search-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
   width: 100%;
   max-width: 600px;
   margin-bottom: 35px;
 }
 
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 16px;
+}
 
 #search {
   width: 100%;
   max-width: 600px;
   padding: 10px;
-  margin-bottom: 35px; 
   box-sizing: border-box;
 }
 
 #addLobo {
   padding: 10px 20px;
-  margin-bottom: 35px; 
   background-color: #deb959;
   color: #fff;
   border-radius: 5px;
