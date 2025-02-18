@@ -62,3 +62,18 @@
 .lobo-card:nth-child(even) .lobo-info {
   text-align: right;
 }
+
+#card-direita {
+  text-align: right;
+}
+
+#imagem-direita {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  width: 338px;
+  height: 228px;
+  background-color: #2c5680; /* Cor sólida */
+  z-index: 0; /* Coloca a div atrás da imagem */
+  border: 2px solid black; /* Borda preta */
+}

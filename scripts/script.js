@@ -1,42 +1,28 @@
-async function inicializarLocalStorage() {
+async function carregarLobosDoJSON() {
   try {
+    console.log("Iniciando o carregamento dos lobos do JSON...");
     const response = await fetch("../lobinhos.json"); // Caminho ajustado
     if (!response.ok) {
-      throw new Error(`Erro ao buscar lobinho.json: ${response.statusText}`);
+      throw new Error(`Erro ao buscar lobinhos.json: ${response.statusText}`);
     }
-    const lobos = await response.json();
-    localStorage.setItem("lobos", JSON.stringify(lobos));
-    console.log("Lobos inicializados no localStorage");
-  } catch (error) {
-    console.error("Erro ao inicializar o localStorage:", error);
-  } finally {
-    console.log("Tentativa de inicialização do localStorage concluída");
-  }
-}
-
-if (!localStorage.getItem("lobos")) {
-  inicializarLocalStorage()
-    .then(() => {
-      console.log("Inicialização do localStorage concluída");
-      carregarLobosDoLocalStorage(); // Carregar os lobos após inicializar o localStorage
-    })
-    .catch((error) => {
-      console.error("Erro durante a inicialização do localStorage:", error);
-    });
-} else {
-  carregarLobosDoLocalStorage(); // Carregar os lobos se já estiverem no localStorage
-}
-
-// Função que carrega os lobos do localStorage e renderiza na tela
-function carregarLobosDoLocalStorage() {
-  const lobosJSON = localStorage.getItem("lobos");
-
-  if (lobosJSON) {
-    const lobos = JSON.parse(lobosJSON);
+    const data = await response.json();
+    const lobos = data.lobos; // Acessa a propriedade 'lobos' do JSON
+    console.log("Lobos carregados com sucesso:", lobos);
     iniciarRotacaoDeLobos(lobos);
-  } else {
-    console.error("Nenhum dado encontrado no localStorage.");
+  } catch (error) {
+    console.error("Erro ao carregar lobos do JSON:", error);
   }
+}
+
+// Função que carrega os lobos do JSON e renderiza na tela
+function iniciarRotacaoDeLobos(lobos) {
+  let startIndex = 0;
+  renderizarLobos(lobos, startIndex);
+
+  setInterval(() => {
+    startIndex = (startIndex + 2) % lobos.length;
+    renderizarLobos(lobos, startIndex);
+  }, 30000); // 30 segundos
 }
 
 function renderizarLobos(lobos, startIndex) {
@@ -74,13 +60,13 @@ function renderizarLobos(lobos, startIndex) {
 
     card.innerHTML = `
       <div class="lobo-card" id="lobo-card">
-        <div class="lobo-info">
+        <div id="card-direita" class="lobo-info">
           <h2>${lobo.nome}</h2>
           <p>Idade: ${lobo.idade} anos</p>
           <p>${lobo.descricao}</p>
         </div>
         <div class="lobo-imagem">
-          <div class="background-image"></div>
+          <div id="imagem-direita" class="background-image"></div>
           <img src="${lobo.imagem}" alt="Lobo ${lobo.nome}" />
         </div>
       </div>
@@ -90,15 +76,5 @@ function renderizarLobos(lobos, startIndex) {
   }
 }
 
-function iniciarRotacaoDeLobos(lobos) {
-  let startIndex = 0;
-  renderizarLobos(lobos, startIndex);
-
-  setInterval(() => {
-    startIndex = (startIndex + 2) % lobos.length;
-    renderizarLobos(lobos, startIndex);
-  }, 30000); // 30 segundos
-}
-
 // Carregar os lobos assim que a página carregar
-window.onload = carregarLobosDoLocalStorage;
+window.onload = carregarLobosDoJSON;
